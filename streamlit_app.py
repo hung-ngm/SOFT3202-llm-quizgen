@@ -102,7 +102,7 @@ def quizflow(texts, openai_api_key):
     retriever = db.as_retriever(search_type="similarity", search_kwargs={"k": 2})
 
     # Create a chain to answer questions
-    qa = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type="stuff", retriever=retriever, return_source_documents=True)
+    qa = RetrievalQA.from_chain_type(llm=OpenAI(openai_api_key=openai_api_key), chain_type="stuff", retriever=retriever, return_source_documents=True)
 
     if 'initialized' not in st.session_state:
         st.session_state['initialized'] = False
