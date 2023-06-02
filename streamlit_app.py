@@ -89,7 +89,7 @@ class Message:
         self.expander.markdown(content)
 
 def quizflow(texts, openai_api_key):    
-    persist_directory = os.environ.get("PERSIST_DIRECTORY")
+    persist_directory = "db"
     
     # Select which embeddings we want to use
     embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
