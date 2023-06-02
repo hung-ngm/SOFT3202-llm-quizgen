@@ -19,5 +19,7 @@ My attempt to create a quiz generator to help me with my exam revision, using LL
 
 `streamlit run streamlit_app.py`
 
+- Enter your OpenAI API Key and start using the app
+
 ## Notes:
 - You can experiment with the starting prompt with `generate_quizzes()` function inside `streamlit_app.py`
